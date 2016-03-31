@@ -6,13 +6,11 @@ export default Ember.Route.extend({
       this.transitionTo('welcome');
     }
   },
-  registerOne: true,
-  registerTwo: false,
   actions: {
     saveUser(params) {
       var newUser = this.store.createRecord('user', params);
       newUser.save();
-      this.transitionTo('/');
+      this.transitionTo('sign-in');
     }
   }
 });
