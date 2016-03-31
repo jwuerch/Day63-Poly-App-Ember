@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('sign-up');
   this.route('sign-in');
   this.authenticatedRoute('welcome');
+  this.route('image');
 });
 
 export default Router;
