@@ -9,11 +9,10 @@ export default Ember.Route.extend({
   registerOne: true,
   registerTwo: false,
   actions: {
-    saveUser() {
-      this.set('registerTwo', true);
-      this.set('registerOne', false);
+    saveUser(params) {
       var newUser = this.store.createRecord('user', params);
       newUser.save();
+      this.transitionTo('/');
     }
   }
 });
