@@ -1,4 +1,4 @@
-
+{{#if registerOne}}
 <div class='page-header'>
     <h1>Register</h1>
 </div>
@@ -19,6 +19,6 @@
 </div>
 <button class='btn btn-default' {{action 'signUp'}}>{{fa-icon 'user-plus'}} Sign Up
 </button>
-{{#if addNewUser}}
+{{else}}
   {{user-new saveUser="saveUser"}}
 {{/if}}
