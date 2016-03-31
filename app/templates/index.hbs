@@ -1,1 +1,7 @@
-{{outlet}}
+<h1>Welcome to Index Page</h1>
+
+<ul>
+  {{#each model as |user|}}
+    {{user-tile user=user}}
+  {{/each}}
+</ul>

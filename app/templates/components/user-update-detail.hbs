@@ -1,0 +1,84 @@
+{{#if updateUserForm}}
+    <div class="update-user-form">
+      <form>
+        <div class="form-group">
+          <label for="preferred_relationship_type">Preferred Type</label>
+          {{input value=preferred_relationship_type id="preferred_relationship_type" placeholder=user.preferred_relationship_type}}
+        </div>
+
+        <div class="form-group">
+          <label for="ethnicity">Ethnicity</label>
+          {{input value=ethnicity id="ethnicity" placeholder=user.ethnicity}}
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          {{input value=status id="status" placeholder=user.status}}
+        </div>
+
+        <div class="form-group">
+          <label for="preferred_relationship_status">Preferred Status</label>
+          {{input value=preferred_relationship_status id="preferred_relationship_status" placeholder=user.preferred_relationship_status}}
+        </div>
+
+        <div class="form-group">
+          <label for="height">Height</label>
+          {{input value=height id="height" placeholder=user.height}}
+        </div>
+
+        <div class="form-group">
+          <label for="body_type">Body type</label>
+          {{input value=body_type id="body_type" placeholder=user.body_type}}
+        </div>
+
+        <div class="form-group">
+          <label for="diet">Diet</label>
+          {{input value=diet id="diet" placeholder=user.diet}}
+        </div>
+
+        <div class="form-group">
+          <label for="smoking">Smoking</label>
+          {{input value=smoking id="smoking" placeholder=user.smoking}}
+        </div>
+
+        <div class="form-group">
+          <label for="drinking">Drinking</label>
+          {{input value=drinking id="drinking" placeholder=user.drinking}}
+        </div>
+
+        <div class="form-group">
+          <label for="drugs">Drugs</label>
+          {{input value=drugs id="drugs" placeholder=user.drugs}}
+        </div>
+
+        <div class="form-group">
+          <label for="spirituality">Spirituality</label>
+          {{input value=spirituality id="spirituality" placeholder=user.spirituality}}
+        </div>
+
+        <div class="form-group">
+          <label for="education">Education</label>
+          {{input value=education id="education" placeholder=user.education}}
+        </div>
+
+        <div class="form-group">
+          <label for="kids">Kids</label>
+          {{input value=kids id="kids" placeholder=user.kids}}
+        </div>
+
+        <div class="form-group">
+          <label for="pets">Pets</label>
+          {{input value=pets id="pets" placeholder=user.pets}}
+        </div>
+
+        <div class="form-group">
+          <label for="languages">Languages</label>
+          {{input value=languages id="languages" placeholder=user.languages}}
+        </div>
+
+        <button {{action 'updateUserDetails' user}}>Save</button>
+      </form>
+    </div>
+{{else}}
+    <button {{action 'showUpdateUserForm'}}>Update</button>
+{{/if}}
