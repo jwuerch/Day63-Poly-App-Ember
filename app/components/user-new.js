@@ -34,7 +34,7 @@ export default Ember.Component.extend({
         island: this.get('island') ? this.get('island') : "",
         free_time: this.get('free_time') ? this.get('free_time') : "",
         images: this.get('images') ? this.get('images') : ""
-      }
+      };
       this.sendAction('saveUser', params);
     }
   }

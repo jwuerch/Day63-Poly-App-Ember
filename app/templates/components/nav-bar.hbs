@@ -14,9 +14,18 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
-        <li>{{#link-to 'register'}}Register{{/link-to}}</li>
+
+            <button
+                class='btn btn-default navbar-btn'
+                {{action 'signOut'}}
+            >
+                {{fa-icon 'sign-out'}} Sign Out
+            </button>
+
+        <li>{{#link-to 'sign-in'}}Login{{/link-to}}</li>
+        <li>{{#link-to 'sign-up' class=""}}Register{{/link-to}}</li>
       </ul>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

@@ -23,7 +23,7 @@ export default Ember.Component.extend({
         kids: this.get('kids'),
         pets: this.get('pets'),
         languages: this.get('languages')
-      }
+      };
       this.set('updateUserForm', false);
       this.sendAction('updateUserDetails', user, params);
     }
