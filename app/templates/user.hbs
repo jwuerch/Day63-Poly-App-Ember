@@ -1,8 +1,13 @@
 
 <p>Name: {{model.username}}</p>
 
+
+
 <ul>
   {{#each model.images as |image|}}
-    {{image-tile image=image}}
+    {{image.title}}
   {{/each}}
 </ul>
+
+
+{{image-new saveImage="saveImage" user=model}}
