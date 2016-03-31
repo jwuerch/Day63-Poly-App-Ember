@@ -1,13 +1,16 @@
-
-
-
-
 <div class="page-header">
   <h1>You must be signed in to use this app</h1>
 </div>
 
 <ul>
-  {{#each model as |user|}}
-    {{user-tile user=user}}
+  {{#each model.users as |user|}}
+    <li>{{#link-to 'user' user.id user=user}}{{user.username}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+<h1>Images</h1>
+<ul>
+  {{#each model.images as |image|}}
+    <li>{{image-tile image=image}}</li>
   {{/each}}
 </ul>

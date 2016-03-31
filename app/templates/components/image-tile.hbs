@@ -1,0 +1,3 @@
+{{#each model.images as |image|}}
+  <li>{{#link-to 'image' image.id}}{{image.title}}{{/link-to}}</li>
+{{/each}}

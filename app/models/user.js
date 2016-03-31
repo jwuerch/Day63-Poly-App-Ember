@@ -4,5 +4,6 @@ export default DS.Model.extend({
   username: DS.attr(),
   birthday: DS.attr(),
   zip_code: DS.attr(),
-  country: DS.attr()
+  country: DS.attr(),
+  images: DS.hasMany('image', {async: true})
 });

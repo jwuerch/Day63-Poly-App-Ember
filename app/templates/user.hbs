@@ -1,1 +1,8 @@
-sadfd
+
+<p>Name: {{model.username}}</p>
+
+<ul>
+  {{#each model.images as |image|}}
+    {{image-tile image=image}}
+  {{/each}}
+</ul>

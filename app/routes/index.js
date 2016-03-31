@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('user');
+    return Ember.RSVP.hash({
+      users: this.store.findAll('user'),
+      images: this.store.findAll('image')
+    });
   },
   beforeModel() {
     this.get('session').fetch().catch((error) => {
