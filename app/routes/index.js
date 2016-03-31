@@ -8,5 +8,11 @@ export default Ember.Route.extend({
     this.get('session').fetch().catch((error) => {
       console.log(error);
     });
+  },
+  actions: {
+    saveUser(params) {
+      var newUser = this.store.createRecord('user', params);
+      newUser.save();
+    }
   }
 });
