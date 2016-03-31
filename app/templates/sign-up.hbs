@@ -17,8 +17,8 @@
     value=password
     placeholder='password'}}
 </div>
-<button class='btn btn-default' {{action 'signUp'}} {{action 'showNewUserForm'}}>{{fa-icon 'user-plus'}} Sign Up
+<button class='btn btn-default' {{action 'signUp'}}>{{fa-icon 'user-plus'}} Sign Up
 </button>
 {{#if addNewUser}}
-{{user-new saveUser="saveUser"}}
+  {{user-new saveUser="saveUser"}}
 {{/if}}

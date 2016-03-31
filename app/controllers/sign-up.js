@@ -12,9 +12,9 @@ export default Ember.Controller.extend({
         if (error) {
           console.log(error);
         } else {
+          this.set('addNewUser', true);
           controller.set('email', null);
           controller.set('password', null);
-          controller.transitionToRoute('sign-up');
         }
       });
     }
