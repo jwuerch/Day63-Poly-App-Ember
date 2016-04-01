@@ -1,13 +1,19 @@
 
 <p>Name: {{model.username}}</p>
 
-
-
+<h5>Profile Pic</h5>
+{{#each model.images as |image|}}
+  {{#unless image.main}}
+    <li>{{image.title}}</li>
+  {{/unless}}
+{{/each}}
+<h5>All pics</h5>
 <ul>
   {{#each model.images as |image|}}
-    {{image.title}}
+    <li>{{image.title}}</li>
   {{/each}}
 </ul>
 
-
 {{image-new saveImage="saveImage" user=model}}
+
+<button {{action 'viewImages'}}>View Images</button>
